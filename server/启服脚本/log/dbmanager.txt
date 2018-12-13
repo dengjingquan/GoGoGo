@@ -1,0 +1,8 @@
+[2018-12-09 20:47:26] Unknown database 'db_demo'
+[2018-12-09 20:47:26] 创建数据库db_demo
+[2018-12-09 20:47:26] 创建数据表tbl_global
+[2018-12-11 01:15:35] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[2018-12-12 01:39:45] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[2018-12-12 01:42:52] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[2018-12-12 01:47:40] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[2018-12-12 01:49:10] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1

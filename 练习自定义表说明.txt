@@ -1,0 +1,70 @@
+# 在db_demo库中自定义表
+
+用户表
+USER = """
+CREATE TABLE `user` (
+  `account` varchar(10) NOT NULL,
+  `password` varchar(10) NOT NULL,
+  PRIMARY KEY (`account`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+"""
+
+分数表
+SCORE = """
+CREATE TABLE `score` (
+  `account` varchar(10) DEFAULT NULL,
+  `usetime` float DEFAULT NULL,
+  KEY `account` (`account`),
+  CONSTRAINT `account` FOREIGN KEY (`account`) REFERENCES `user` (`account`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+"""
+
+
+另外
+服务端在\code\clientsocket\manager.py 中修改服务器IP
+另外客户端要在    Assets\Resources\GameSystems\Scripts\GameSocket 中修改本机IP
+
+
+测试SQL
+插入用户：
+INSERT INTO `db_demo`.`user` (`account`, `password`) VALUES ('11123', '4244343');
+INSERT INTO `db_demo`.`user` (`account`, `password`) VALUES ('1234', '1234');
+INSERT INTO `db_demo`.`user` (`account`, `password`) VALUES ('dang', '1234');
+INSERT INTO `db_demo`.`user` (`account`, `password`) VALUES ('dangdang', '1234');
+INSERT INTO `db_demo`.`user` (`account`, `password`) VALUES ('dengq', '123456');
+INSERT INTO `db_demo`.`user` (`account`, `password`) VALUES ('hhhhh', '12345');
+INSERT INTO `db_demo`.`user` (`account`, `password`) VALUES ('kingdang', '123456');
+INSERT INTO `db_demo`.`user` (`account`, `password`) VALUES ('mybest', '12345');
+
+插入分数
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('1234', '80.6402');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('1234', '80.3837');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('dangdang', '78');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('dang', '95');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('1234', '67');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('1234', '88');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('dang', '112');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('dang', '112');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('dang', '101');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('dangdang', '96');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('dang', '90');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('dang', '70');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('dang', '80');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('dang', '90');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('dang', '73');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('dang', '90');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('1234', '90.3752');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('1234', '90.3717');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('1234', '90.807');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('dengq', '87.342');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('1234', '108.2456');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('hhhhh', '12.964');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('1234', '10.2437');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('1234', '10.8416');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('1234', '10.7871');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('1234', '13.4858');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('11123', '67.3555');
+INSERT INTO `db_demo`.`score` (`account`, `usetime`) VALUES ('kingdang', '78.4188');
+
+
+
